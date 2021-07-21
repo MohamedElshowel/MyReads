@@ -11,7 +11,7 @@ function Book({ bookData, onUpdateShelves }) {
     return (
         <div className="book">
             <div className="book-top">
-                <div className="book-cover" style={{ width: 128, height: 193, backgroundImage: `url("${bookData.imageLinks.thumbnail}")` }}></div>
+                <div className="book-cover" style={{ backgroundImage: `url("${bookData.imageLinks && bookData.imageLinks.thumbnail}")` }}></div>
                 <div className="book-shelf-changer">
                     <select onChange={onShelfChange} defaultValue={bookData.shelf}>
                         <option value="move" disabled>Move to...</option>
@@ -23,7 +23,7 @@ function Book({ bookData, onUpdateShelves }) {
                 </div>
             </div>
             <div className="book-title">{bookData.title}</div>
-            <div className="book-authors">{bookData.authors.join(', ')}</div>
+            <div className="book-authors">{bookData.authors && bookData.authors.join(', ')}</div>
         </div>
     );
 }
