@@ -1,11 +1,9 @@
 import React from 'react';
-import * as BooksAPI from '../../BooksAPI';
 
 function Book({ bookData, onUpdateShelves }) {
 
     const onShelfChange = (evt) => {
-        const updatedShelfName = evt.target.value;
-        BooksAPI.update(bookData, updatedShelfName).then(updatedShelves => onUpdateShelves(updatedShelves));
+        onUpdateShelves(bookData, evt.target.value);
     }
 
     return (
@@ -13,7 +11,7 @@ function Book({ bookData, onUpdateShelves }) {
             <div className="book-top">
                 <div className="book-cover" style={{ backgroundImage: `url("${bookData.imageLinks && bookData.imageLinks.thumbnail}")` }}></div>
                 <div className="book-shelf-changer">
-                    <select onChange={onShelfChange} defaultValue={bookData.shelf}>
+                    <select onChange={onShelfChange} defaultValue={bookData.shelf || 'none'}>
                         <option value="move" disabled>Move to...</option>
                         <option value="currentlyReading">Currently Reading</option>
                         <option value="wantToRead">Want to Read</option>
