@@ -10,7 +10,6 @@ function BooksList({ books, shelves, onUpdateShelves }) {
                     <ol className="books-grid">
                         {shelves.currentlyReading.map(bookId => {
                             const bookData = books.find(book => book.id === bookId);
-                            debugger;
                             return (
                                 <li key={bookId}>
                                     <Book bookData={bookData} onUpdateShelves={onUpdateShelves} />

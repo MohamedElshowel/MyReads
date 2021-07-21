@@ -5,10 +5,7 @@ function Book({ bookData, onUpdateShelves }) {
 
     const onShelfChange = (evt) => {
         const updatedShelfName = evt.target.value;
-
-        BooksAPI
-            .update(bookData, updatedShelfName).
-            then(updatedShelves => onUpdateShelves(updatedShelves));
+        BooksAPI.update(bookData, updatedShelfName).then(updatedShelves => onUpdateShelves(updatedShelves));
     }
 
     return (
