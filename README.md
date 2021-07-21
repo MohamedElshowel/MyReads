@@ -10,9 +10,9 @@ This app is bootstrapped with [Create React App](https://github.com/facebookincu
 
 
 ## How To Use:
-* install all project dependencies with `npm install`.
-* start the development server with `npm start`.
-* build code for production: `npm run build`.
+* Install all project dependencies with `npm install`.
+* Start the development server with `npm start`.
+* Build code for production: `npm run build`.
 
 
 ## Folder Structure
