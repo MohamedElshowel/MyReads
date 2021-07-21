@@ -10,8 +10,12 @@ class Search extends Component {
 
   onQueryChange = async (evt) => {
     const queryText = evt.target.value;
-    const searchResults = queryText ? await BooksAPI.search(queryText.toLowerCase()) : [];
-    
+    const searchResults = queryText
+      ? await BooksAPI.search(queryText.toLowerCase()).catch((error) =>
+          console.log(error)
+        )
+      : [];
+
     this.setState({
       booksResults: (searchResults.length) ? searchResults : []
     });

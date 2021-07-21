@@ -38,7 +38,7 @@ class BooksApp extends React.Component {
         shelves: updatedShelves,
         myBooks: [...this.state.myBooks, bookData]
       });
-    });
+    }).catch(error => console.log(error));
 
   }
 
