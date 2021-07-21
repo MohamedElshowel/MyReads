@@ -25,9 +25,9 @@ This app is bootstrapped with [Create React App](https://github.com/facebookincu
 │   └── index.html # Index HTML file
 └── src
     ├── components # App components.
-    │   ├── books.js    # common component for the book.
-    │   ├── BooksList.js # books list component to be rendered in home page `/`
-    │   └── Search.js   # search component to be rendered in search page `/search`.
+    │   ├── Books.js    # Books common component.
+    │   ├── BooksList.js # Books list component to be rendered in home page `/`
+    │   └── Search.js   # Search component to be rendered in search page `/search`.
     ├── App.css # Styles for the whole app.
     ├── App.js # The root of the app.
     ├── App.test.js # Used for testing. Provided with Create React App.
