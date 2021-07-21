@@ -1,6 +1,6 @@
 # MyReads App
 
-Book Tracking App using React.js categorize your book.
+Book Tracking App using React.js to categorize your books' reading statuses.
 
 This app is bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app) and it only uses React and [react-router-dom](https://reactrouter.com/web/guides/quick-start) as its dependencies.
 
